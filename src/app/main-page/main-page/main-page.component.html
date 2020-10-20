@@ -1,16 +1,30 @@
-<nb-card size="small">
-    <nb-card-header>Add a Summoner</nb-card-header>
-    <nb-card-body>
-        <input type="text" nbInput fullWidth fieldSize="giant" placeholder="name...">
-        <div class="cb-container">
-            <nb-checkbox status="warning">AFK</nb-checkbox>
-            <nb-checkbox status="warning">Talked Shit</nb-checkbox>
-            <nb-checkbox status="warning">Intentional Feeding</nb-checkbox>
-        </div>
-    </nb-card-body>
-    <nb-card-footer>
-        <button nbButton fullWidth status="success" size="giant">Add</button>
-    </nb-card-footer>
-</nb-card>
+<form #newSummonerForm="ngForm">
+    <nb-card size="medium" accent="primary">
+        <nb-card-header>Add a Summoner</nb-card-header>
+        <nb-card-body>
+            <input type="text" nbInput fullWidth fieldSize="giant" [(ngModel)]="newSummoner.name" name="name" placeholder="name..." required>
 
+            <div class="cb-container">
+                <button nbButton status="success" size="giant" (click)="handleExperienceClick(true)"><nb-icon icon="heart-outline"></nb-icon>Positive Experience</button>
+                <button nbButton status="danger" size="giant" (click)="handleExperienceClick(false)"><nb-icon icon="minus-circle-outline"></nb-icon>Negative Experience</button>
+            </div>
+            <div class="cb-container" *ngIf=wasPositiveExperience>
+                <nb-checkbox status="success" [(ngModel)]="newSummoner.stayedCool" name="stayedCool">Stayed Cool</nb-checkbox>
+                <nb-checkbox status="success" [(ngModel)]="newSummoner.greatShotCalling" name="greatShotCalling">Great Shotcalling</nb-checkbox>
+                <nb-checkbox status="success" [(ngModel)]="newSummoner.gg" name="gg">GG &lt;3</nb-checkbox>
+            </div>
+            <div class="cb-container" *ngIf="wasPositiveExperience === false">
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.negativeAttitude" name="negativeAttitude">Negative Attitude</nb-checkbox>
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.verbalAbuse" name="verbalAbuse">Verbal Abuse</nb-checkbox>
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.leavingGameAFK" name="leavingGameAFK">Leaving The Game / AFK</nb-checkbox>
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.intentionalFeeding" name="intentionalFeeding">Intentional Feeding</nb-checkbox>
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.hateSpeech" name="hateSpeech">Hate Speech</nb-checkbox>
+                <nb-checkbox status="danger" [(ngModel)]="newSummoner.cheating" name="cheating">Cheating</nb-checkbox>
+            </div>
+        </nb-card-body>
+        <nb-card-footer>
+            <button nbButton fullWidth status="primary" size="giant">Add</button>
+        </nb-card-footer>
+    </nb-card>
+</form>
 <app-summoner-view></app-summoner-view>

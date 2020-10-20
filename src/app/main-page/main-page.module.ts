@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main-page/main-page.component';
-import { NbButtonModule, NbCardModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbCheckboxModule, NbIconModule, NbInputModule } from '@nebular/theme';
 import { SummonerViewModule } from '../summoner-view/summoner-view.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { SummonerViewModule } from '../summoner-view/summoner-view.module';
     NbInputModule,
     NbButtonModule,
     NbCheckboxModule,
-    SummonerViewModule
+    SummonerViewModule,
+    FormsModule,
+    NbIconModule,
   ]
 })
 export class MainPageModule { }
