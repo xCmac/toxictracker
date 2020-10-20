@@ -9,7 +9,7 @@ import { INewSummoner } from '../../Interfaces/INewSummoner';
 export class MainPageComponent implements OnInit {
 
   wasPositiveExperience;
-  newSummoner: INewSummoner;
+  newSummoner: INewSummoner = {} as INewSummoner;
 
   positiveCheckboxes = [
     { text: 'Stayed Cool', value: false },
