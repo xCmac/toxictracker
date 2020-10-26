@@ -34,6 +34,16 @@ export class MainPageComponent implements OnInit {
 
   handleExperienceClick(bool: boolean): void {
     console.log(bool);
+    this.newSummoner = {} as INewSummoner;
     this.wasPositiveExperience = bool;
+    this.newSummoner.isPositiveExperience = bool;
+  }
+
+  handleAddNewSummonerClick(): void {
+    console.log(this.newSummoner);
+  }
+
+  reset(): void {
+    this.newSummoner = {} as INewSummoner;
   }
 }
