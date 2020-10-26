@@ -20,6 +20,7 @@ export class SummonerViewComponent implements OnInit {
     const mobalyticsgg = () => encodeURI(`https://app.mobalytics.gg/lol/profile/NA/${name}/overview`);
     const porofessorgg = () => encodeURI(`https://www.leagueofgraphs.com/summoner/na/th3+sauce`.split(' ').join('+'));
     const blitzgg = () => encodeURI(`https://blitz.gg/lol/profile/na1/${name}`);
+
     switch (site) {
       case 'OP':
         window.open(opgg());
