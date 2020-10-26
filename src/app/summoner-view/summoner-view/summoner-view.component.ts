@@ -24,7 +24,6 @@ export class SummonerViewComponent implements OnInit {
       case 'OP':
         window.open(opgg());
         break;
-
       case 'MOBALYTICS':
         window.open(mobalyticsgg());
         break;
@@ -37,8 +36,6 @@ export class SummonerViewComponent implements OnInit {
       default:
         break;
     }
-
-
   }
 
 }
