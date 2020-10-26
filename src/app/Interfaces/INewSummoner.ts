@@ -1,6 +1,7 @@
 export interface INewSummoner {
     name: string;
     isPositiveExperience: boolean;
+    submittedTime: number;
     stayedCool: boolean;
     greatShotCalling: boolean;
     gg: boolean;

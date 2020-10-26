@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ToxicserviceService } from './toxicservice.service';
+import { ToxicService } from './toxic.service';
 
-describe('ToxicserviceService', () => {
-  let service: ToxicserviceService;
+describe('ToxicService', () => {
+  let service: ToxicService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ToxicserviceService);
+    service = TestBed.inject(ToxicService);
   });
 
   it('should be created', () => {

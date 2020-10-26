@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { INewSummoner } from '../../Interfaces/INewSummoner';
-
+import { ToxicService } from '../../services/toxic.service';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -27,20 +27,24 @@ export class MainPageComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private toxicService: ToxicService) { }
 
   ngOnInit(): void {
   }
 
   handleExperienceClick(bool: boolean): void {
-    console.log(bool);
+    const name = this.newSummoner.name;
     this.newSummoner = {} as INewSummoner;
+
+    this.newSummoner.name = name;
     this.wasPositiveExperience = bool;
     this.newSummoner.isPositiveExperience = bool;
   }
 
   handleAddNewSummonerClick(): void {
     console.log(this.newSummoner);
+    this.newSummoner.submittedTime = Date.now();
+    this.toxicService.addSummoner(this.newSummoner);
   }
 
   reset(): void {
