@@ -1,8 +1,6 @@
 # Toxictracker
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7eaa21c4-1a6e-4dd5-9e83-819507b166fd/deploy-status)](https://app.netlify.com/sites/elohell/deploys)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
