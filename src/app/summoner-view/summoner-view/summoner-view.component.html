@@ -4,11 +4,10 @@
     </nb-card-header>
     <nb-card-footer>
         <div class="stats-buttons">
-            <button nbButton status="info" size="giant" (click)="handleStatsLookUpClick('OP', summoner.name)">OP.GG</button>
-            <button nbButton status="info" size="giant" (click)="handleStatsLookUpClick('MOBALYTICS', summoner.name)">MOBALYTICS.GG</button>
-            <button nbButton status="info" size="giant" (click)="handleStatsLookUpClick('POROFESSOR', summoner.name)">POROFESSOR.GG</button>
-            <button nbButton status="info" size="giant" (click)="handleStatsLookUpClick('BLITZ', summoner.name)">BLITZ.GG</button>
+            <button nbButton class="stat-button" status="info" size="small" (click)="handleStatsLookUpClick('OP', summoner.name)">OP.GG</button>
+            <button nbButton class="stat-button" status="info" size="small" (click)="handleStatsLookUpClick('MOBALYTICS', summoner.name)">MOBALYTICS.GG</button>
+            <button nbButton class="stat-button" status="info" size="small" (click)="handleStatsLookUpClick('POROFESSOR', summoner.name)">POROFESSOR.GG</button>
+            <button nbButton class="stat-button" status="info" size="small" (click)="handleStatsLookUpClick('BLITZ', summoner.name)">BLITZ.GG</button>
         </div>
     </nb-card-footer>
 </nb-card>
-

@@ -1,10 +1,15 @@
 .stats-buttons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 nb-card-header {
     display: flex;
     justify-content: center;
+}
+
+.stat-button {
+    margin: 5px;
 }
